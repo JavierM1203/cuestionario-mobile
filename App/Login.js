@@ -4,15 +4,22 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-nativ
 export default function Login() {
 
   const [userName, setUserName] = useState('');
+  const [pass, setPass] = useState('');
 
   return (
     <View style={styles.container}>
-      <Text style={styles.label}>Bienvenido al cuestionario de preguntas</Text>
-      <Text style={styles.label}>Nombre de usuario:</Text>
+      <Text style={styles.label}>Register</Text>
       <TextInput
         style={styles.input}
         value={userName}
         onChangeText={setUserName}
+        placeholder='Nombre de usuario'
+      />
+      <TextInput
+        style={styles.input}
+        value={userName}
+        onChangeText={setUserName}
+        placeholder='Contraseña'
       />
       <TouchableOpacity style={styles.button} >
         <Text style={styles.buttonText}>Iniciar sesión</Text>
@@ -27,10 +34,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     padding: 20,
   },
-  label: { fontWeight: 'bold', marginTop: 10, textAlign: 'center' },
+  label: {
+    marginTop: 10,
+    textAlign: 'left',
+    fontSize: 40
+  },
   input: {
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: 'black',
     padding: 10,
     marginTop: 5,
     marginBottom: 10,
@@ -40,7 +51,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#000',
     paddingVertical: 8,
     paddingHorizontal: 20,
-    borderRadius: 16,
+
   },
   buttonText: {
     color: '#fff',
