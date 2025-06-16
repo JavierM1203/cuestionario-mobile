@@ -9,7 +9,3 @@ export default function QuestionaryScreen({navigation}) {
         </View>
     )
 }
-
-const styles = StyleSheet.create({
-
-})

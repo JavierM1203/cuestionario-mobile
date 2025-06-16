@@ -2,30 +2,11 @@ import { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 
 export default function Login() {
-
-  const [userName, setUserName] = useState('');
-  const [pass, setPass] = useState('');
-
-  return (
-    <View style={styles.container}>
-      <Text style={styles.label}>Register</Text>
-      <TextInput
-        style={styles.input}
-        value={userName}
-        onChangeText={setUserName}
-        placeholder='Nombre de usuario'
-      />
-      <TextInput
-        style={styles.input}
-        value={userName}
-        onChangeText={setUserName}
-        placeholder='Contraseña'
-      />
-      <TouchableOpacity style={styles.button} >
-        <Text style={styles.buttonText}>Iniciar sesión</Text>
-      </TouchableOpacity>
-    </View>
-  );
+    return (
+      <View>
+        <Text>Login</Text>
+      </View>
+    )
 }
 
 const styles = StyleSheet.create({
