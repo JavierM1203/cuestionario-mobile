@@ -4,7 +4,6 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-nativ
 export default function Login() {
 
   const [userName, setUserName] = useState('');
-  const [pass, setPass] = useState('');
 
   return (
     <View style={styles.container}>
@@ -14,12 +13,6 @@ export default function Login() {
         value={userName}
         onChangeText={setUserName}
         placeholder='Nombre de usuario'
-      />
-      <TextInput
-        style={styles.input}
-        value={userName}
-        onChangeText={setUserName}
-        placeholder='Contraseña'
       />
       <TouchableOpacity style={styles.button} >
         <Text style={styles.buttonText}>Iniciar sesión</Text>
