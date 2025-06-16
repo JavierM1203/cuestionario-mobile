@@ -11,10 +11,16 @@ export default function PreguntaPage() {
   const [pregunta, setPregunta] = useState(null);
   const [respuesta, setRespuesta] = useState("");
 
+  const API_URL = process.env.EXPO_PUBLIC_API_URL;
+
+
   useEffect(() => {
     const fetchPregunta = async () => {
       try {
-        const res = await fetch(`http://localhost:3000/preguntas/${idPregunta}`);
+        const res = await fetch(`${API_URL}/preguntas/${idPregunta}`, {headers: {
+          "Content-Type": "application/json",  
+          "ngrok-skip-browser-warning": "true"
+        }});
         const data = await res.json();
         setPregunta(data);
       } catch (err) {
@@ -35,9 +41,10 @@ export default function PreguntaPage() {
     };
 
     try {
-      await fetch("http://localhost:3000/respuestas", {
+      await fetch(`${API_URL}/reapuestas`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", "ngrok-skip-browser-warning": "true"
+ },
         body: JSON.stringify(nuevaRespuesta)
       });
       Alert.alert("Éxito", "Respuesta guardada");

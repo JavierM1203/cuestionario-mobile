@@ -6,14 +6,19 @@ export default function ListaPreguntasPage() {
   const route = useRoute();
   const navigation = useNavigation();
   const { idCuestionario } = route.params;
-
   const [preguntas, setPreguntas] = useState(null);
   const [cuestionario, setCuestionario] = useState(null);
+  const API_URL = process.env.EXPO_PUBLIC_API_URL;
+
+  `${API_URL}/foods`
 
   useEffect(() => {
     const fetchPreguntas = async () => {
       try {
-        const res = await fetch(`http://localhost:3000/preguntas?idCuestionario=${idCuestionario}`);
+        const res = await fetch(`${API_URL}/preguntas?idCuestionario=${idCuestionario}`, {headers: {
+          "Content-Type": "application/json",
+          "ngrok-skip-browser-warning": "true"
+        }});
         const data = await res.json();
         setPreguntas(data);
       } catch (err) {
@@ -23,7 +28,10 @@ export default function ListaPreguntasPage() {
 
     const fetchCuestionario = async () => {
       try {
-        const res = await fetch(`http://localhost:3000/cuestionarios/${idCuestionario}`);
+        const res = await fetch(`${API_URL}/cuestionarios/${idCuestionario}`, {header: {
+          "Content-Type": "application/json",
+          "ngrok-skip-browser-warning": "true"
+        }});
         const data = await res.json();
         setCuestionario(data);
       } catch (err) {
