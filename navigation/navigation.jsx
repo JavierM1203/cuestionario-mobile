@@ -12,8 +12,8 @@ export default function Navigation() {
         <NavigationContainer>
             <Stack.Navigator initialRouteName="Login">
                 <Stack.Screen name="Login" component={LoginScreen} />
-                <Stack.Screen name="Questionary" component={QuestionariesScreen} />
-                <Stack.Screen name="Questionaries" component={QuestionaryScreen} />
+                <Stack.Screen name="Questionary" component={QuestionaryScreen} />
+                <Stack.Screen name="Questionaries" component={QuestionariesScreen} />
             </Stack.Navigator>
         </NavigationContainer>
     )
