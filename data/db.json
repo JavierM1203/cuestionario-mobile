@@ -1,0 +1,110 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nombre": "juan"
+    },
+    {
+      "id": "2",
+      "nombre": "maria"
+    },
+    {
+      "id": "181e",
+      "nombre": "joaco"
+    }
+  ],
+  "cuestionarios": [
+    {
+      "id": "1",
+      "nombre": "Películas",
+      "descripcion": "Preguntas sobre tus películas favoritas"
+    },
+    {
+      "id": "2",
+      "nombre": "Disney",
+      "descripcion": "Preguntas sobre personajes de Disney"
+    }
+  ],
+  "preguntas": [
+    {
+      "id": "1",
+      "idCuestionario": 1,
+      "titulo": "¿Cuál es tu película favorita?",
+      "tipo": "texto"
+    },
+    {
+      "id": "2",
+      "idCuestionario": 1,
+      "titulo": "¿Cuál viste más recientemente?",
+      "tipo": "texto"
+    },
+    {
+      "id": "3",
+      "idCuestionario": 2,
+      "titulo": "¿Qué personaje te gusta más?",
+      "tipo": "multiple_opcion",
+      "opciones": [
+        "Mickey",
+        "Woody",
+        "Elsa",
+        "Simba"
+      ]
+    },
+    {
+      "id": "4",
+      "idCuestionario": 2,
+      "titulo": "¿Cuál es tu película de Disney menos favorita?",
+      "tipo": "texto"
+    },
+    {
+      "id": "5",
+      "idCuestionario": 2,
+      "titulo": "¿Qué villano es el más aterrador?",
+      "tipo": "multiple_opcion",
+      "opciones": [
+        "Úrsula",
+        "Scar",
+        "Jafar",
+        "Maléfica"
+      ]
+    }
+  ],
+  "respuestas": [
+    {
+      "id": "1",
+      "idUsuario": 1,
+      "idPregunta": 3,
+      "respuesta": "Woody"
+    },
+    {
+      "id": "2",
+      "idUsuario": 2,
+      "idPregunta": 1,
+      "respuesta": "Titanic"
+    },
+    {
+      "id": "4426",
+      "idUsuario": 1,
+      "idPregunta": 1,
+      "respuesta": "ti vieja "
+    },
+    {
+      "id": "6bb1",
+      "idUsuario": 1,
+      "idPregunta": 3,
+      "respuesta": "Elsa"
+    },
+    {
+      "id": "5f11",
+      "idUsuario": 1,
+      "idPregunta": 4,
+      "respuesta": "buscando a nemo"
+    },
+    {
+      "id": "dfb0",
+      "idUsuario": 1,
+      "idPregunta": 3,
+      "respuesta": "Elsa"
+    }
+  ]
+}

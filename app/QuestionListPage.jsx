@@ -10,8 +10,6 @@ export default function ListaPreguntasPage() {
   const [cuestionario, setCuestionario] = useState(null);
   const API_URL = process.env.EXPO_PUBLIC_API_URL;
 
-  `${API_URL}/foods`
-
   useEffect(() => {
     const fetchPreguntas = async () => {
       try {
